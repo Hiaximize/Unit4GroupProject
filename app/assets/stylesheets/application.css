@@ -41,9 +41,13 @@ h1{
     height: 650px;
     border: 2px solid black;
 }
+#imageContainer{
+    text-align: center;
+}
 #addWorkoutImage{
-    width: 100%;
+    width: 95%;
     height: 50vh;
+    border-radius: 2px;
 }
 .addworkout{
     margin: 15px;

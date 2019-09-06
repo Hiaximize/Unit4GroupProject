@@ -1,10 +1,12 @@
 import React from 'react'
+import Picture from '../../assets/images/workoutPlaceholder.png'
 
 class Splash extends React.Component{
     render(){
         return (
             <div id="mainImage">
-                <img id="memeImage" src="/app/workoutPlaceholder1.png" />
+                <img id="memeImage" src={Picture} />
+                
             </div>
         )
     }
