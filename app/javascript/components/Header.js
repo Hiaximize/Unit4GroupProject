@@ -3,8 +3,9 @@ import React from 'react'
 class Header extends React.Component{
     render(){
         return(
-            <div>
-                <h1>I'm the header</h1>
+            <div id="header">
+                <h1>Gainz Tracker</h1>
+                <img id="profileImage" src="#" alt="profileImage"/>
             </div>
         )
     }
