@@ -2,6 +2,7 @@ import React from 'react'
 import Splash from './Splash.js'
 import CreateWorkout from './CreateWorkout'
 
+
 class Main extends React.Component{
     constructor(props){
         super(props)
@@ -15,8 +16,8 @@ class Main extends React.Component{
     render(){
         return(
             <main>
-                <Splash />
-                {/* <CreateWorkout handleSubmit={this.handleSubmit} /> */}
+                {/* <Splash /> */}
+                <CreateWorkout handleSubmit={this.handleSubmit} />
             </main>
         )
     }
