@@ -22,3 +22,16 @@ I use to be an avid lifter and one thing I could never get into, was bringing a 
 ## ERD Table
 
 ![ERD Tables](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/Relational%20Tables.png)
+
+
+# Wireframes
+
+![index page](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/index.png)
+
+![create workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/create_a_workout.png)
+
+![start working out](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/start_workout.png)
+
+![view workouts](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/view_workouts.png)
+
+![edit/delete workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/edit_workout.png)
