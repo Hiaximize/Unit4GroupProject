@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Group project by: Derek Barker and Colton Kayser
 
-Things you may want to cover:
+## Gainz Tracker
 
-* Ruby version
+Inspiration for project
 
-* System dependencies
+I use to be an avid lifter and one thing I could never get into, was bringing a pen and notebook with me to the gym and write the notes inside during my workout. This topped with our love handles growing ever more, we decided we needed a solution to get us back in the gym
 
-* Configuration
+### Userstores
+1. As a user I want to be able to come to Gainz Tracker and create a workout plan to use while in the gym
 
-* Database creation
+2. As a user I want to be able to save my past exercises and quickly add them to another workout
 
-* Database initialization
+3. As a user I want to be able to add new exercises to use in workout plan
 
-* How to run the test suite
+4. As a user I want to be able to edit/remove existing exercises
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. As a user I want to be able to track when I took protein/pre-workout/post workout supplements / meals
