@@ -1,14 +1,14 @@
 # README
 
-#Group project by: Derek Barker and Colton Kayser
+# Group project by: Derek Barker and Colton Kayser
 
-##Gainz Tracker
+## Gainz Tracker
 
 Inspiration for project
 
 I use to be an avid lifter and one thing I could never get into, was bringing a pen and notebook with me to the gym and write the notes inside during my workout. This topped with our love handles growing ever more, we decided we needed a solution to get us back in the gym
 
-###Userstores
+### Userstores
 1. As a user I want to be able to come to Gainz Tracker and create a workout plan to use while in the gym
 
 2. As a user I want to be able to save my past exercises and quickly add them to another workout
