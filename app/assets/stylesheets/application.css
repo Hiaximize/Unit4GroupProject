@@ -25,19 +25,25 @@ h1{
     text-align: center;
 }
 
+#header h1 {
+  padding-left: 15px;
+  font-size: 90px;
+}
+
 #mainImage{
-    margin-top: 25px;
+    margin-top: 115px;
     width: 100%;
     height: 650px;
-    background-color: black;
+    /* background-color: black; */
     box-sizing: border-box;
+    text-align: center;
 }
 #profileImage{
     margin-right: 50px;
     border-radius: 50%;
 }
 #memeImage{
-    width: 100%;
+    width: 90%;
     height: 650px;
     border: 2px solid black;
 }
@@ -78,4 +84,60 @@ fieldset{
     background-color: rgb(75, 134, 180);
     color: rgb(231, 239, 246);
     font-size: 45px;
+}
+
+#splashButtonsContainer {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.splashButtons {
+  background-color: #4b86b4;
+  color: #e7eff6;
+  font-size: 80px;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 45px;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  font-size: 30px;
+
+}
+
+#footerContainer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 50px;
+
+}
+
+#footerTitle {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #e7eff6;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.devNames {
+  font-weight: 700;
+  margin-bottom: 15px;
 }

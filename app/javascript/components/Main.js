@@ -16,8 +16,8 @@ class Main extends React.Component{
     render(){
         return(
             <main>
-                {/* <Splash /> */}
-                <CreateWorkout handleSubmit={this.handleSubmit} />
+                <Splash />
+              {/*   <CreateWorkout handleSubmit={this.handleSubmit} />  */}
             </main>
         )
     }
