@@ -1,5 +1,6 @@
 import React from 'react'
 import Main from './Main'
+import Picture from '../../assets/images/workoutPlaceholder.png'
 
 
 class CreateWorkout extends React.Component{
@@ -21,8 +22,8 @@ class CreateWorkout extends React.Component{
 
                         <fieldset>
 
-                             <div id="addWorkoutImage">
-                                    <img src="#"></img>
+                             <div>
+                                    <img id="addWorkoutImage" src={Picture}></img>
                             </div>
 
                             <legend>Add WorkOut</legend>
