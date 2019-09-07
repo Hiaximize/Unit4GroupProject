@@ -7,7 +7,6 @@ class Footer extends React.Component{
           <h3 id="footerTitle">Development Team</h3>
             <div id="footer">
                 <div id="derek">
-
                   <ul>
                     <h4 className="devNames">Derek</h4>
                     <li><a href="https://www.linkedin.com/in/dbarkerit/" target="_blank">LinkedIn</a></li>

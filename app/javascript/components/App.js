@@ -17,12 +17,12 @@ class App extends React.Component{
     handleView = (view) => {
        let fileName= ''
         switch (view, fileName) {
-            
+
             case 'home':
                 console.log("inside home")
                 fileName= 'Splash.js'
                 break
-            
+
             case 'createWorkout':
                 filename= 'CreateWorkout.js'
                 console.log("inside workout switch")
@@ -31,7 +31,7 @@ class App extends React.Component{
             case 'updateWorkout':
                 fileName= 'UpdateWorkout.js'
                 break
-            
+
             case 'viewWorkouts':
                 fileName= 'ViewWorkouts.js'
                 break
@@ -39,6 +39,12 @@ class App extends React.Component{
             default:
                 break
         }
+        this.setState({
+          view: {
+            page: view,
+            fileName: fileName
+          }
+        })
     }
 
     handleChange(event){
@@ -51,10 +57,10 @@ class App extends React.Component{
         return(
             <div id="app">
                 <Header />
-                <Main 
+                <Main
                 handleChange={this.handleChange}
-                handleView= {this.handleView}
-                view ={this.state.view}/>
+                handleView={this.handleView}
+                view={this.state.view}/>
                 <Footer />
             </div>
         )

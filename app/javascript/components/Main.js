@@ -22,10 +22,24 @@ class Main extends React.Component{
     render(){
         return(
             <main>
-                <Splash 
+                <Splash
                 handleView={this.props.handleView}
                 view={this.props.view}/>
-              {/*   <CreateWorkout handleSubmit={this.handleSubmit} />  */}
+                <CreateWorkout handleSubmit={this.handleSubmit}
+                handleView={this.props.handleView} />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+
             </main>
         )
     }

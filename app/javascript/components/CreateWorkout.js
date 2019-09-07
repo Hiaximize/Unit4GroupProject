@@ -23,7 +23,7 @@ class CreateWorkout extends React.Component{
                         <fieldset>
 
                              <div id="imageContainer">
-                                    <img id="addWorkoutImage" src={Picture}></img>
+                                <img id="addWorkoutImage" src={Picture}></img>
                             </div>
 
                             <legend>Add WorkOut</legend>
