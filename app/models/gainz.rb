@@ -37,4 +37,11 @@ class Gainz
                 "reps" => result.first["target_reps"].to_i
         }
     end
+
+    def self.delete(id)
+        result = DB.exec("DELETE FROM exercise WHERE exercise_id=#{id};")
+        return {
+            "deleted": true
+        }
+    end
 end

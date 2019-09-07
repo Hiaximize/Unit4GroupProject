@@ -8,4 +8,12 @@ class ExerciseController < ApplicationController
     def show
         render json: Gainz.find(params["id"])
     end
+
+    def delete
+        render json: Gainz.delete(params["id"])
+    end
+
+    def update
+        render json: Gainz.update(params["id"])
+    end
 end
