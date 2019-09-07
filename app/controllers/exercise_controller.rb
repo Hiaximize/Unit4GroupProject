@@ -4,4 +4,8 @@ class ExerciseController < ApplicationController
     def index 
         render json: Gainz.all
     end
+
+    def show
+        render json: Gainz.find(params["id"])
+    end
 end
