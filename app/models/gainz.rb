@@ -20,4 +20,15 @@ class Gainz
             }
         end
     end
+
+    def self.find(id)
+        result = DB.exec("SELECT * FROM exercise WHERE exercise_id=#{id};")
+        return {
+            "id" => result.first["exercise_id"].to_i,
+                "name" => result.first["exercise_name"],
+                "weight" => result.first["target_weight"].to_i,
+                "sets" => result.first["target_sets"].to_i,
+                "reps" => result.first["target_reps"].to_i
+        }
+    end
 end
