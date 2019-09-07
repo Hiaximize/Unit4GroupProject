@@ -7,7 +7,38 @@ class App extends React.Component{
 
     constructor(props){
         super(props)
+        this.state={
+            view : {
+                page: 'home',
+                fileName: ''
+            }
+        }
+    }
+    handleView = (view) => {
+       let fileName= ''
+        switch (view, fileName) {
+            
+            case 'home':
+                console.log("inside home")
+                fileName= 'Splash.js'
+                break
+            
+            case 'createWorkout':
+                filename= 'CreateWorkout.js'
+                console.log("inside workout switch")
+                break
 
+            case 'updateWorkout':
+                fileName= 'UpdateWorkout.js'
+                break
+            
+            case 'viewWorkouts':
+                fileName= 'ViewWorkouts.js'
+                break
+
+            default:
+                break
+        }
     }
 
     handleChange(event){
@@ -20,7 +51,10 @@ class App extends React.Component{
         return(
             <div id="app">
                 <Header />
-                <Main />
+                <Main 
+                handleChange={this.handleChange}
+                handleView= {this.handleView}
+                view ={this.state.view}/>
                 <Footer />
             </div>
         )

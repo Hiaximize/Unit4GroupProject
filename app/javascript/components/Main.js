@@ -8,6 +8,12 @@ class Main extends React.Component{
         super(props)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
+     handleView(view, fileName){
+         this.props.handleView(view, fileName)
+     }
+     handleChange(){
+         this.props.handleChange()
+     }
      handleSubmit(event) {
          event.preventDefault()
          console.log("new workout submitted")
@@ -16,7 +22,9 @@ class Main extends React.Component{
     render(){
         return(
             <main>
-                <Splash />
+                <Splash 
+                handleView={this.props.handleView}
+                view={this.props.view}/>
               {/*   <CreateWorkout handleSubmit={this.handleSubmit} />  */}
             </main>
         )
