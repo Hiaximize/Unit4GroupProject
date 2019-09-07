@@ -4,6 +4,7 @@ import Header from './Header.js'
 class ViewWorkouts extends React.Component{
     constructor(props){
         super(props)
+        console.log(this.props.postData);
 
     }
     render(){
@@ -11,7 +12,7 @@ class ViewWorkouts extends React.Component{
             <div>
 
                     <div className="tile">
-                        {this.props.postData.name}
+                        {this.props.postData.exerciseName}
                     </div>
             </div>
 

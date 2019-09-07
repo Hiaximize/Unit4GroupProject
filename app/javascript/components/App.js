@@ -17,7 +17,6 @@ class App extends React.Component{
               targetWeight: null,
               targetSets: null,
               targetReps: null,
-              targetBodyPart: null,
               exerciseId: null
             }
         }
@@ -68,7 +67,8 @@ class App extends React.Component{
           view: {
             page: view,
             fileName: fileName
-          }
+          },
+          formInputs: formInputs
         })
     }
 
@@ -85,7 +85,8 @@ class App extends React.Component{
                 <Main
                 handleChange={this.handleChange}
                 handleView={this.handleView}
-                view={this.state.view}/>
+                view={this.state.view}
+                formInputs={this.state.formInputs}/>
                 <Footer />
             </div>
         )

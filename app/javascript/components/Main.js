@@ -33,6 +33,7 @@ class Main extends React.Component{
         })
           .then(createdExercise => {
             return createdExercise.json()
+            console.log(createdExercise.json());
           })
           .then(jsonedExercise => {
             this.props.handleView('home')
@@ -91,13 +92,16 @@ class Main extends React.Component{
      }
      handleSubmit(event) {
          event.preventDefault()
-         console.log("new workout submitted")
+         console.log(this.state.exerciseName)
+         console.log(this.state)
+         console.log('ive been submitted');
      }
 
 ///life cycle
      componentDidMount(){
-       this.fetchExercises();
+       this.fetchExercises()
      }
+
 
     render(){
         return(
@@ -120,17 +124,19 @@ class Main extends React.Component{
             ? this.state.exercises.map((postData) => (
 
               <ViewWorkouts
-              key={postData.id}
+              key={postData.exerciseId}
               postData={postData}
               handleView={this.props.handleView}
               handleDelete={this.handleDelete}
-              view={this.props.view}/>
+              // view={this.props.view}
+              />
               ))
               :<CreateWorkout
                 handleSubmit={this.handleSubmit}
-                handleView={this.props.handleView}
+                handleCreate={this.handleCreate}
+                // handleView={this.props.handleView}
                 handleUpdate={this.handleUpdate}
-                formInputs={this.props.formInputs}
+                formInputs={this.state.formInputs}
                 view={this.props.view}
                 />
             }
