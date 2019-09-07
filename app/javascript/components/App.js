@@ -10,12 +10,29 @@ class App extends React.Component{
         this.state={
             view : {
                 page: 'home',
-                fileName: ''
+                fileName: 'home'
+            },
+            formInputs: {
+              excerciseName: null,
+              targetWeight: null,
+              targetSets: null,
+              targetReps: null,
+              targetBodyPart: null,
+              exerciseId: null
             }
         }
     }
-    handleView = (view) => {
+    handleView = (view, postData) => {
        let fileName= ''
+       let formInputs = {
+         exerciseName: '',
+         targetWeight: '',
+         targetSets: '',
+         targetReps: '',
+         targetBodyPart: '',
+         exerciseId: null
+
+       }
         switch (view, fileName) {
 
             case 'home':
@@ -30,6 +47,14 @@ class App extends React.Component{
 
             case 'updateWorkout':
                 fileName= 'UpdateWorkout.js'
+                formInputs = {
+                  exerciseName: postData.exerciseName,
+                  targetWeight: postData.targetWeight,
+                  targetSets: postData.targetSets,
+                  targetReps: postData.targetReps,
+                  targetBodyPart: postData.targetBodyPart,
+                  exerciseId: postData.exerciseId
+                }
                 break
 
             case 'viewWorkouts':
