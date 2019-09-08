@@ -21,7 +21,7 @@ class ViewWorkouts extends React.Component{
 
                         <ul>
                           <li onClick={() => {this.props.handleView('updateWorkout', this.props.postData)}}>Edit</li>
-                          <li onClick={()=> {this.props.handleDelete(this.props.postData.id)}}>Delete</li>
+                          <li onClick={()=> {this.props.handleDelete(this.props.postData.exercise_id)}}>Delete</li>
                         </ul>
                     </div>
             </div>
@@ -29,6 +29,7 @@ class ViewWorkouts extends React.Component{
         )
     }
 }
+
 
 export default ViewWorkouts
 // <div id="viewWorkoutContainer">

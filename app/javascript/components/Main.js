@@ -10,7 +10,7 @@ class Main extends React.Component{
         this.state = {
           exercises: []
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
+        // this.handleSubmit = this.handleSubmit.bind(this)
         }
 
       fetchExercises = () => {
@@ -65,8 +65,13 @@ class Main extends React.Component{
 
 ///Delete
 
-    handleDelete = (id) => {
-      fetch(`/exercise/${id}`, {
+    handleDelete = (exercise_id) => {
+     
+      
+      // console.log(this.state)
+      // console.log(this.props)
+      // console.log(this.props.postData)
+      fetch(`/exercise/${exercise_id}`, {
         method: 'DELETE',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -74,29 +79,24 @@ class Main extends React.Component{
         }
       })
       .then(data => {
+        
         this.setState(prevState => {
-          const exercises = prevState.exercises.filter( exercise => exercise.id !== id)
+          const exercises = prevState.exercises.filter( exercise => exercise.exercise_id !== exercise_id)
           return { exercises }
         })
+        
       })
       .catch(err => console.log(err))
+
+      //  setTimeout(() => {
+      //    location.reload()
+      //  }, 3000);
     }
 
+    //  handleSubmit(event) {
+    //      event.preventDefault()
 
-
-
-     // handleView(view, pageTitle){
-     //     this.props.handleView(view, pageTitle)
-     // }
-     // handleChange(){
-     //     this.props.handleChange()
-     // }
-     handleSubmit(event) {
-         event.preventDefault()
-         // console.log(this.state.exerciseName)
-         // console.log(this.state)
-         // console.log('ive been submitted');
-     }
+    //  }
 
 ///life cycle
      componentDidMount(){
@@ -124,7 +124,7 @@ class Main extends React.Component{
                 {this.props.view.pageTitle === 'home'
                 ? this.state.exercises.map((postData) => (
                   <ViewWorkouts
-                  key={postData.exerciseId}
+                  key={postData.exercise_id}
                   postData={postData}
                   handleView={this.props.handleView}
                   handleDelete={this.handleDelete}
@@ -138,10 +138,8 @@ class Main extends React.Component{
                 ? <CreateWorkout
                  handleCreate={this.handleCreate}
                  formInputs={this.props.formInputs}
-                 // handleSubmit={this.handleSubmit}
                   handleUpdate={this.handleUpdate}
                   view={this.props.view}
-                  // handleView={this.props.handleView}
                   />
                 : ''}
             </div>

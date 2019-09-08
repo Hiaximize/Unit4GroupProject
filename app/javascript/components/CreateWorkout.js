@@ -18,7 +18,9 @@ class CreateWorkout extends React.Component{
 
 
     handleChange = (event) => {
-      this.setState({[event.target.id] : event.target.value})
+      this.setState({
+          [event.target.id] : event.target.value
+        })
     }
 
     handleSubmit(event){
@@ -38,11 +40,11 @@ class CreateWorkout extends React.Component{
     componentDidMount(){
       this.setState({
         //formInputs
-        exerciseName: this.props.exerciseName,
-        targetWeight: this.props.targetWeight,
-        targetSets: this.props.targetSets,
-        targetReps: this.props.targetReps,
-        exerciseId: this.props.exerciseId
+        exerciseName: this.props.exercise_name,
+        targetWeight: this.props.target_weight,
+        targetSets: this.props.target_sets,
+        targetReps: this.props.target_reps,
+        exerciseId: this.props.exercise_id
       })
     }
     render(){
