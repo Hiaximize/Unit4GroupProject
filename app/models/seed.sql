@@ -1,4 +1,4 @@
-create table exercise (exercise_name varchar(100), target_weight integer, target_sets integer, target_reps integer, target_body_part varchar(100));
+create table exercise (exercise_id SERIAL, exercise_name varchar(100), target_weight integer, target_sets integer, target_reps integer, target_body_part varchar(100));
 
 
 insert into

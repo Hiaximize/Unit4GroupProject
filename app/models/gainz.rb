@@ -1,7 +1,7 @@
 class Gainz
 
     # Our unique data base url
-     DATABASE_URL = 'postgres://kcmranatsnkrqx:2d51d471383160ce3ae3ec1f11e1f3add50a287c4f9384abb92841193b39e9be@ec2-54-243-47-196.compute-1.amazonaws.com:5432/daqc908ate9rgm'
+    #  DATABASE_URL = 'postgres://kcmranatsnkrqx:2d51d471383160ce3ae3ec1f11e1f3add50a287c4f9384abb92841193b39e9be@ec2-54-243-47-196.compute-1.amazonaws.com:5432/daqc908ate9rgm'
 
     #  Code to handle either the cloud database or local DB connection
     if(ENV['DATABASE_URL'])
@@ -32,7 +32,7 @@ class Gainz
         return {
             "exercise_id" => result.first["exercise_id"].to_i,
                 "exercise_name" => result.first["exercise_name"],
-                "exercise_weight" => result.first["target_weight"].to_i,
+                "target_weight" => result.first["target_weight"].to_i,
                 "target_sets" => result.first["target_sets"].to_i,
                 "target_reps" => result.first["target_reps"].to_i,
                 "target_body_part" => result.first["target_body_part"]
@@ -50,12 +50,12 @@ class Gainz
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO exercise (exercise_name,target_weight, target_sets,target_reps, target_body_part) VALUES (
-                    '#{opts["exercise_name"]}',
-                     #{opts["target_weight"]},
-                     #{opts["target_sets"]},
-                     #{opts["target_reps"]},
-                     '#{opts["target_body_part"]}')
+                INSERT INTO exercise (exercise_name,target_weight, target_sets,target_reps, target_body_part) 
+                VALUES ('#{opts["exercise_name"]}', 
+                        #{opts["target_weight"]},
+                        #{opts["target_sets"]},
+                        #{opts["target_reps"]},
+                        '#{opts["target_body_part"]}')
                 RETURNING exercise_id, exercise_name, target_weight, target_sets, target_reps, target_body_part;
                 SQL
         )

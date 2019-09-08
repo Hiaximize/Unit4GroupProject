@@ -13,23 +13,24 @@ class App extends React.Component{
                 pageTitle: 'home'
             },
             formInputs: {
-              excerciseName: null,
-              targetWeight: null,
-              targetSets: null,
-              targetReps: null,
-              exerciseId: null
+              excercise_name: null,
+              target_weight: null,
+              target_sets: null,
+              target_reps: null,
+              target_body_part: null,
+              exercise_id: null
             }
         }
     }
     handleView = (view, postData) => {
        let pageTitle= ''
        let formInputs = {
-         exerciseName: '',
-         targetWeight: '',
-         targetSets: '',
-         targetReps: '',
-         // targetBodyPart: '',
-         exerciseId: null
+         exercise_name: '',
+         target_weight: '',
+         target_wets: '',
+         target_reps: '',
+         target_body_part: '',
+         exercise_id: null
 
        }
         switch (view) {
@@ -46,12 +47,12 @@ class App extends React.Component{
             case 'updateWorkout':
                 pageTitle = 'update'
                 formInputs = {
-                  exerciseName: postData.exerciseName,
-                  targetWeight: postData.targetWeight,
-                  targetSets: postData.targetSets,
-                  targetReps: postData.targetReps,
-                  targetBodyPart: postData.targetBodyPart,
-                  exerciseId: postData.exerciseId
+                  exerciseName: postData.exercise_name,
+                  targetWeight: postData.target_weight,
+                  targetSets: postData.target_sets,
+                  targetReps: postData.target_Reps,
+                  targetBodyPart: postData.target_body_part,
+                  exerciseId: postData.exercise_id
                 }
                 break
 
