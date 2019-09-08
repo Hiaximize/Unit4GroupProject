@@ -26,7 +26,7 @@ class CreateWorkout extends React.Component{
         this.props.handleCreate(this.state)
         // if(this.props.view.pageTitle === 'create') {
         //   this.props.handleCreate(this.state)
-        // } else if(this.props.view.pageTitle === 'updateWorkout') {
+        // } else if(this.props.view.pageTitle === 'update') {
         //   this.props.handleUpdate(this.state)
         // }
         // console.log(this.state.exerciseName);

@@ -10,7 +10,7 @@ class App extends React.Component{
         this.state={
             view : {
                 page: 'home',
-                fileName: 'home'
+                pageTitle: 'home'
             },
             formInputs: {
               excerciseName: null,
@@ -21,14 +21,14 @@ class App extends React.Component{
             }
         }
     }
-    handleView = (view) => {
+    handleView = (view, postData) => {
        let pageTitle= ''
        let formInputs = {
          exerciseName: '',
          targetWeight: '',
          targetSets: '',
          targetReps: '',
-         targetBodyPart: '',
+         // targetBodyPart: '',
          exerciseId: null
 
        }
@@ -45,14 +45,14 @@ class App extends React.Component{
 
             case 'updateWorkout':
                 pageTitle = 'update'
-                // formInputs = {
-                //   exerciseName: postData.exerciseName,
-                //   targetWeight: postData.targetWeight,
-                //   targetSets: postData.targetSets,
-                //   targetReps: postData.targetReps,
-                //   targetBodyPart: postData.targetBodyPart,
-                //   exerciseId: postData.exerciseId
-                // }
+                formInputs = {
+                  exerciseName: postData.exerciseName,
+                  targetWeight: postData.targetWeight,
+                  targetSets: postData.targetSets,
+                  targetReps: postData.targetReps,
+                  targetBodyPart: postData.targetBodyPart,
+                  exerciseId: postData.exerciseId
+                }
                 break
 
             default:
@@ -81,7 +81,7 @@ class App extends React.Component{
                 handleChange={this.handleChange}
                 handleView={this.handleView}
                 view={this.state.view}
-                formInputs={this.props.formInputs}
+                formInputs={this.state.formInputs}
                 />
                 <Footer />
             </div>

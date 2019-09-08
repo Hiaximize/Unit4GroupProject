@@ -66,7 +66,7 @@ class Main extends React.Component{
 ///Delete
 
     handleDelete = (id) => {
-      fetch(`exercise/${id}`, {
+      fetch(`/exercise/${id}`, {
         method: 'DELETE',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -85,12 +85,12 @@ class Main extends React.Component{
 
 
 
-     handleView(view, fileName){
-         this.props.handleView(view, fileName)
-     }
-     handleChange(){
-         this.props.handleChange()
-     }
+     // handleView(view, pageTitle){
+     //     this.props.handleView(view, pageTitle)
+     // }
+     // handleChange(){
+     //     this.props.handleChange()
+     // }
      handleSubmit(event) {
          event.preventDefault()
          // console.log(this.state.exerciseName)
@@ -137,10 +137,10 @@ class Main extends React.Component{
                 {this.props.view.pageTitle === 'create'
                 ? <CreateWorkout
                  handleCreate={this.handleCreate}
+                 formInputs={this.props.formInputs}
                  // handleSubmit={this.handleSubmit}
-                  // handleUpdate={this.handleUpdate}
-                  // formInputs={this.state.formInputs}
-                  // view={this.props.view}
+                  handleUpdate={this.handleUpdate}
+                  view={this.props.view}
                   // handleView={this.props.handleView}
                   />
                 : ''}

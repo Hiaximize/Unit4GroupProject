@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header.js'
+import CreateWorkout from './CreateWorkout.js'
 
 class ViewWorkouts extends React.Component{
     constructor(props){
@@ -11,16 +12,16 @@ class ViewWorkouts extends React.Component{
 
                     <div className="tile">
                     <ul>
-                        <li>{this.props.postData.exerciseName}</li>
-                        <li>Sets: {this.props.postData.targetSets}</li>
-                        <li>Reps: {this.props.postData.targetReps}</li>
-                        <li>Weight: {this.props.postData.targetWeight}lbs </li>
+                        <li>{this.props.postData.exercise_name}</li>
+                        <li>Sets: {this.props.postData.target_sets}</li>
+                        <li>Reps: {this.props.postData.target_reps}</li>
+                        <li>Weight: {this.props.postData.target_weight}lbs </li>
 
                       </ul>
 
                         <ul>
-                          <li onClick={() => {this.props.handleView('updateWorkout')}}>Edit</li>
-                          <li>Delete</li>
+                          <li onClick={() => {this.props.handleView('updateWorkout', this.props.postData)}}>Edit</li>
+                          <li onClick={()=> {this.props.handleDelete(this.props.postData.id)}}>Delete</li>
                         </ul>
                     </div>
             </div>

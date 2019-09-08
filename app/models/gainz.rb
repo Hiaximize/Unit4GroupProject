@@ -102,5 +102,5 @@ class Gainz
             "target_body_part"=> results.first["target_body_part"]
         }
     end
-      
+
 end
