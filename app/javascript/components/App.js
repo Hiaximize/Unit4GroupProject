@@ -41,7 +41,6 @@ class App extends React.Component{
 
             case 'createWorkout':
                 pageTitle = 'create'
-                console.log("inside workout switch")
                 break
 
             case 'updateWorkout':
