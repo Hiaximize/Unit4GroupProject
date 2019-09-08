@@ -58,7 +58,7 @@ class Gainz
         }
     end
 
-
+    # Create route
     def self.create(opts)
         results = DB.exec(
             <<-SQL
