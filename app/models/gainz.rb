@@ -12,6 +12,19 @@ class Gainz
     end
 
 
+    # #
+    # #   Prepared Statements
+    # #
+    # begin
+    #     DB.prepare("create_exercise",
+    # <<-SQL
+    #     INSERT INTO exercise (exercise_name,
+    #             target_weight, target_sets, target_reps, target_body_part)
+    #     VALUES ($1, $2, $3, $4, $5)
+    #     RETURNING exercise_id, exercise_name,                 target_weight, target_sets,                  target_reps, target_body_part;
+    #     SQL
+    #     )
+
     # Index route
     def self.all
         results = DB.exec("SELECT * FROM exercise;")
@@ -44,4 +57,30 @@ class Gainz
             "deleted": true
         }
     end
+
+    # Create route
+    def self.create(opts)
+        results = DB.exec(
+            <<-SQL
+                INSERT INTO exercise (exercise_name,target_weight, target_sets,target_reps, target_body_part) VALUES (
+                    '#{opts["exercise_name"]}',
+                     #{opts["target_weight"]},
+                     #{opts["target_sets"]},
+                     #{opts["target_reps"]},
+                     '#{opts["target_body_part"]}')
+                RETURNING exercise_id, exercise_name, target_weight, target_sets, target_reps, target_body_part;
+                SQL
+        )
+        return {
+                "exercise_id" => results.first["exercise_id"].to_i,
+
+                "exercise_name" => results.first["exercise_name"],
+
+                "target_weight" => results.first["target_weight"].to_i,
+
+                "target_sets" => results.first["target_sets"].to_i,
+
+                "target_reps" => results.first["target_reps"].to_i
+            }
+        end
 end
