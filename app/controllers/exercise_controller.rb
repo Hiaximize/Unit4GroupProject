@@ -14,6 +14,10 @@ class ExerciseController < ApplicationController
     end
 
     def update
-        render json: Gainz.update(params["id"])
+        render json: Gainz.update(params["id"], params["exercise"])
+    end
+
+    def create
+        render json: Gainz.create(params["exercise"])
     end
 end
