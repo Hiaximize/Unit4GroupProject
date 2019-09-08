@@ -66,11 +66,7 @@ class Main extends React.Component{
 ///Delete
 
     handleDelete = (exercise_id) => {
-     
-      
-      // console.log(this.state)
-      // console.log(this.props)
-      // console.log(this.props.postData)
+
       fetch(`/exercise/${exercise_id}`, {
         method: 'DELETE',
         headers: {
@@ -87,10 +83,6 @@ class Main extends React.Component{
         
       })
       .catch(err => console.log(err))
-
-      //  setTimeout(() => {
-      //    location.reload()
-      //  }, 3000);
     }
 
      handleSubmit(event) {
@@ -142,6 +134,10 @@ class Main extends React.Component{
                   view={this.props.view}
                   />
                 : ''}
+
+                {this.props.view.pageTitle === 'updateWorkout'
+                ? <UpdateWorkout /> : ''}
+                
             </div>
 
 

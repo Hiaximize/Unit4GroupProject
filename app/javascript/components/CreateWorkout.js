@@ -1,6 +1,7 @@
 import React from 'react'
 // import Main from './Main'
 import Picture from '../../assets/images/workoutPlaceholder.png'
+// import Form from './Form.js'
 
 
 class CreateWorkout extends React.Component{
@@ -10,8 +11,8 @@ class CreateWorkout extends React.Component{
           exercise_name: '',
           target_weight: '',
           target_sets: '',
-          target_reps: ''
-        //   exercise_id: null
+          target_reps: '',
+          exercise_id: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -33,6 +34,11 @@ class CreateWorkout extends React.Component{
             <div id="addWorkoutContainer">
 
                 <div id="addWorkout">
+                    {/* <Form 
+                    handleCreate={this.handleCreate}
+                    formInputs={this.props.formInputs}
+                    handleUpdate={this.handleUpdate}
+                    view={this.props.view}/> */}
                     <form onSubmit={this.handleSubmit}>
 
                         <fieldset>

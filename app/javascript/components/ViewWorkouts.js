@@ -11,19 +11,22 @@ class ViewWorkouts extends React.Component{
             <div>
 
                     <div className="tile">
-                    <ul>
-                        <li>{this.props.postData.exercise_name}</li>
-                        <li>Sets: {this.props.postData.target_sets}</li>
-                        <li>Reps: {this.props.postData.target_reps}</li>
-                        <li>Weight: {this.props.postData.target_weight}lbs </li>
-
-                      </ul>
+                        <ul>
+                            <li className="info">{this.props.postData.exercise_name}</li>
+                            <li className="info">Sets: {this.props.postData.target_sets}</li>
+                            <li className="info">Reps: {this.props.postData.target_reps}</li>
+                            <li className="info">Weight: {this.props.postData.target_weight} lbs </li>
+                        </ul>
 
                         <ul>
-                          <li onClick={() => {this.props.handleView('updateWorkout', this.props.postData)}}>Edit</li>
-                          <li onClick={()=> {this.props.handleDelete(this.props.postData.exercise_id)}}>Delete</li>
+                          <li className="editDelete options" onClick={() => {this.props.handleView('updateWorkout', this.props.postData)}}>Edit</li>
+                          <li className="editDelete options" id="delete" onClick={()=> {this.props.handleDelete(this.props.postData.exercise_id)}}>Delete</li>
                         </ul>
                     </div>
+
+                    {this.props.view.pageTitle === 'updateWorkout'
+                ? <UpdateWorkout 
+                /> : ''}
             </div>
 
         )
