@@ -11,6 +11,7 @@ class Gainz
         DB = PG.connect(host: "localhost", port: 5432, dbname: 'groupproject_development')
     end
 
+
     # Index route
     def self.all
         results = DB.exec("SELECT * FROM exercise;")
@@ -73,6 +74,7 @@ class Gainz
             }
         end
 
+
     def self.update(id, opts)
         results = DB.exec(
             <<-SQL
@@ -82,7 +84,7 @@ class Gainz
                 target_sets= #{opts["target_sets"]},
                 target_reps= #{opts["target_reps"]},
                 target_body_part= #{opts["target_body_part"]}
-                WHERE exercise_id=#{id}
+                WHERE exercise_id= #{id}
                 RETURNING exercise_id, target_weight exercise_name;
             SQL
         )
@@ -101,6 +103,4 @@ class Gainz
         }
     end
       
-
-    
 end
