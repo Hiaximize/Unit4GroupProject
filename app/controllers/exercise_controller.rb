@@ -18,6 +18,8 @@ class ExerciseController < ApplicationController
     end
 
     def create
+        puts params
+        puts 'anything'
         render json: Gainz.create(params["exercise"])
     end
 end

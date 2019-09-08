@@ -10,7 +10,7 @@ class Main extends React.Component{
         this.state = {
           exercises: []
         }
-        // this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
         }
 
       fetchExercises = () => {
@@ -26,24 +26,24 @@ class Main extends React.Component{
         console.log(createData)
         fetch('/exercise', {
           body: JSON.stringify(createData),
-          method: 'Post',
+          method: 'POST',
           headers: {
             'Accept': 'application/json, text/plain, */*',
-            'Content-Type': 'appication/json'
+            'Content-Type': 'application/json'
           }
         })
           .then(createdExercise => {
+            
             return createdExercise.json()
-            console.log(createdExercise.json());
           })
           .then(jsonedExercise => {
             this.props.handleView('home')
             this.setState(prevState => {
               prevState.exercises.push(jsonedExercise)
               return { exercises: prevState.exercises}
+              this.fetchExercises()
             })
-          })
-          .catch(err => console.log(err))
+          }).catch(err => {console.log(err)})
       }
 
 ///update
@@ -93,10 +93,10 @@ class Main extends React.Component{
       //  }, 3000);
     }
 
-    //  handleSubmit(event) {
-    //      event.preventDefault()
+     handleSubmit(event) {
+         event.preventDefault()
 
-    //  }
+     }
 
 ///life cycle
      componentDidMount(){
@@ -136,8 +136,8 @@ class Main extends React.Component{
 
                 {this.props.view.pageTitle === 'create'
                 ? <CreateWorkout
-                 handleCreate={this.handleCreate}
-                 formInputs={this.props.formInputs}
+                  handleCreate={this.handleCreate}
+                  formInputs={this.props.formInputs}
                   handleUpdate={this.handleUpdate}
                   view={this.props.view}
                   />
