@@ -10,35 +10,62 @@ class App extends React.Component{
         this.state={
             view : {
                 page: 'home',
-                fileName: ''
+                pageTitle: 'home'
+            },
+            formInputs: {
+              excercise_name: null,
+              target_weight: null,
+              target_sets: null,
+              target_reps: null,
+              target_body_part: null,
+              exercise_id: null
             }
         }
     }
-    handleView = (view) => {
-       let fileName= ''
-        switch (view, fileName) {
-            
+    handleView = (view, postData) => {
+       let pageTitle= ''
+       let formInputs = {
+         exercise_name: '',
+         target_weight: '',
+         target_wets: '',
+         target_reps: '',
+         target_body_part: '',
+         exercise_id: null
+
+       }
+        switch (view) {
+
             case 'home':
-                console.log("inside home")
-                fileName= 'Splash.js'
+
+                pageTitle = 'home'
                 break
-            
+
             case 'createWorkout':
-                filename= 'CreateWorkout.js'
-                console.log("inside workout switch")
+                pageTitle = 'create'
                 break
 
             case 'updateWorkout':
-                fileName= 'UpdateWorkout.js'
-                break
-            
-            case 'viewWorkouts':
-                fileName= 'ViewWorkouts.js'
+                pageTitle = 'update'
+                formInputs = {
+                  exerciseName: postData.exercise_name,
+                  targetWeight: postData.target_weight,
+                  targetSets: postData.target_sets,
+                  targetReps: postData.target_Reps,
+                  targetBodyPart: postData.target_body_part,
+                  exerciseId: postData.exercise_id
+                }
                 break
 
             default:
-                break
+              break
         }
+        this.setState({
+          view: {
+            page: view,
+            pageTitle: pageTitle
+          },
+          formInputs: formInputs
+        })
     }
 
     handleChange(event){
@@ -51,10 +78,12 @@ class App extends React.Component{
         return(
             <div id="app">
                 <Header />
-                <Main 
+                <Main
                 handleChange={this.handleChange}
-                handleView= {this.handleView}
-                view ={this.state.view}/>
+                handleView={this.handleView}
+                view={this.state.view}
+                formInputs={this.state.formInputs}
+                />
                 <Footer />
             </div>
         )

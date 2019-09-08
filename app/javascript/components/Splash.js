@@ -36,7 +36,7 @@ class Splash extends React.Component{
             //          break
             //  }
           }
-    
+
     render(){
         return (
           <div id="splashContainer">
@@ -44,8 +44,8 @@ class Splash extends React.Component{
                 <img id="memeImage" src={Picture} />
             </div>
             <div id="splashButtonsContainer">
-              <input type="submit" onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton" value="Create Workout" />
-              <input className="splashButtons" id="goToWorkoutButton" type="submit" value="Go to Workouts" />
+              <li onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton"> Create Workout </li>
+              <li onClick={()=>{this.props.handleView('viewWorkouts')}} className="splashButtons" id="goToWorkoutButton">Go to Workouts </li>
             </div>
           </div>
         )
