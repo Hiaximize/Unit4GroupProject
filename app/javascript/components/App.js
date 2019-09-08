@@ -21,8 +21,8 @@ class App extends React.Component{
             }
         }
     }
-    handleView = (view, postData) => {
-       let fileName= ''
+    handleView = (view) => {
+       let pageTitle= ''
        let formInputs = {
          exerciseName: '',
          targetWeight: '',
@@ -32,51 +32,47 @@ class App extends React.Component{
          exerciseId: null
 
        }
-        switch (view, fileName) {
+        switch (view) {
 
             case 'home':
-                console.log("inside home")
-                fileName= 'Splash.js'
+
+                pageTitle = 'home'
                 break
 
             case 'createWorkout':
-                filename= 'CreateWorkout.js'
+                pageTitle = 'create'
                 console.log("inside workout switch")
                 break
 
             case 'updateWorkout':
-                fileName= 'UpdateWorkout.js'
-                formInputs = {
-                  exerciseName: postData.exerciseName,
-                  targetWeight: postData.targetWeight,
-                  targetSets: postData.targetSets,
-                  targetReps: postData.targetReps,
-                  targetBodyPart: postData.targetBodyPart,
-                  exerciseId: postData.exerciseId
-                }
-                break
-
-            case 'viewWorkouts':
-                fileName= 'ViewWorkouts.js'
+                pageTitle = 'update'
+                // formInputs = {
+                //   exerciseName: postData.exerciseName,
+                //   targetWeight: postData.targetWeight,
+                //   targetSets: postData.targetSets,
+                //   targetReps: postData.targetReps,
+                //   targetBodyPart: postData.targetBodyPart,
+                //   exerciseId: postData.exerciseId
+                // }
                 break
 
             default:
-                break
+              break
         }
         this.setState({
           view: {
             page: view,
-            fileName: fileName
+            pageTitle: pageTitle
           },
           formInputs: formInputs
         })
     }
 
-    handleChange(event){
-        this.setState({
-            [event.target.id]: event.target.value
-        })
-    }
+    // handleChange(event){
+    //     this.setState({
+    //         [event.target.id]: event.target.value
+    //     })
+    // }
 
     render(){
         return(
@@ -86,7 +82,8 @@ class App extends React.Component{
                 handleChange={this.handleChange}
                 handleView={this.handleView}
                 view={this.state.view}
-                formInputs={this.state.formInputs}/>
+                formInputs={this.props.formInputs}
+                />
                 <Footer />
             </div>
         )
