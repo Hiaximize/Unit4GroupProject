@@ -149,13 +149,13 @@ li {
   flex-wrap: wrap;
   width: 95%;
   margin: 25px auto;
-
 }
 
 .tile {
   width: 40vw;
-  height: 25vh;
+  height: 90%;
   border: 1px solid #e7eff6;
   margin: 15px;
   border-radius: 8px;
+  margin-bottom: 25px;
 }

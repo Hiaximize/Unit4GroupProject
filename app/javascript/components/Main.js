@@ -23,6 +23,7 @@ class Main extends React.Component{
 
 ///Create
       handleCreate = (createData) => {
+        console.log(createData)
         fetch('/exercise', {
           body: JSON.stringify(createData),
           method: 'Post',
@@ -65,7 +66,7 @@ class Main extends React.Component{
 ///Delete
 
     handleDelete = (id) => {
-      fetch(`exercise/${id}`, {
+      fetch(`/exercise/${id}`, {
         method: 'DELETE',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -84,17 +85,17 @@ class Main extends React.Component{
 
 
 
-     handleView(view, fileName){
-         this.props.handleView(view, fileName)
-     }
-     handleChange(){
-         this.props.handleChange()
-     }
+     // handleView(view, pageTitle){
+     //     this.props.handleView(view, pageTitle)
+     // }
+     // handleChange(){
+     //     this.props.handleChange()
+     // }
      handleSubmit(event) {
          event.preventDefault()
-         console.log(this.state.exerciseName)
-         console.log(this.state)
-         console.log('ive been submitted');
+         // console.log(this.state.exerciseName)
+         // console.log(this.state)
+         // console.log('ive been submitted');
      }
 
 ///life cycle
@@ -114,7 +115,7 @@ class Main extends React.Component{
                 </div>
                 <div id="splashButtonsContainer">
                   <li onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton"> Create Workout </li>
-                  <li onClick={()=>{this.props.handleView('home')}} className="splashButtons" id="goToWorkoutButton">Go to Workouts </li>
+                  <li onClick={()=>{this.props.handleView('home')}} className="splashButtons" id="goToWorkoutButton">View Exercises</li>
                 </div>
               </div>
 
@@ -135,12 +136,12 @@ class Main extends React.Component{
 
                 {this.props.view.pageTitle === 'create'
                 ? <CreateWorkout
-                  handleSubmit={this.handleSubmit}
-                  handleCreate={this.handleCreate}
+                 handleCreate={this.handleCreate}
+                 formInputs={this.props.formInputs}
+                 // handleSubmit={this.handleSubmit}
                   handleUpdate={this.handleUpdate}
-                  formInputs={this.state.formInputs}
                   view={this.props.view}
-                  handleView={this.props.handleView}
+                  // handleView={this.props.handleView}
                   />
                 : ''}
             </div>

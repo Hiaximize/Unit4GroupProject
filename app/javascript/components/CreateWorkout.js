@@ -13,7 +13,9 @@ class CreateWorkout extends React.Component{
           targetReps: '',
           exerciseId: null
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
+
 
     handleChange = (event) => {
       this.setState({[event.target.id] : event.target.value})
@@ -21,15 +23,16 @@ class CreateWorkout extends React.Component{
 
     handleSubmit(event){
         event.preventDefault()
-        if(this.props.view.page === 'createWorkout') {
-          this.props.handleCreate(this.state)
-        } else if(this.props.view.page === 'updateWorkout') {
-          this.props.handleUpdate(this.state)
-        }
-        console.log(this.state.exerciseName);
-        console.log(this.state.targetWeight);
-        console.log(this.state.targetSets);
-        console.log(this.state.targetReps);
+        this.props.handleCreate(this.state)
+        // if(this.props.view.pageTitle === 'create') {
+        //   this.props.handleCreate(this.state)
+        // } else if(this.props.view.pageTitle === 'update') {
+        //   this.props.handleUpdate(this.state)
+        // }
+        // console.log(this.state.exerciseName);
+        // console.log(this.state.targetWeight);
+        // console.log(this.state.targetSets);
+        // console.log(this.state.targetReps);
     }
 
     componentDidMount(){
@@ -39,7 +42,7 @@ class CreateWorkout extends React.Component{
         targetWeight: this.props.targetWeight,
         targetSets: this.props.targetSets,
         targetReps: this.props.targetReps,
-        // exerciseId: this.props.exerciseId
+        exerciseId: this.props.exerciseId
       })
     }
     render(){
@@ -47,7 +50,7 @@ class CreateWorkout extends React.Component{
             <div id="addWorkoutContainer">
 
                 <div id="addWorkout">
-                    <form onSubmit={this.props.handleSubmit}>
+                    <form onSubmit={this.handleSubmit}>
 
                         <fieldset>
 
