@@ -21,7 +21,8 @@ class Gainz
                 "exercise_name" => result["exercise_name"],
                 "target_weight" => result["target_weight"].to_i,
                 "target_sets" => result["target_sets"].to_i,
-                "target_reps" => result["target_reps"].to_i
+                "target_reps" => result["target_reps"].to_i,
+                "target_body_part" => result["target_body_part"]
             }
         end
     end
@@ -50,8 +51,8 @@ class Gainz
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO exercise (exercise_name,target_weight, target_sets,target_reps, target_body_part) 
-                VALUES ('#{opts["exercise_name"]}', 
+                INSERT INTO exercise (exercise_name,target_weight, target_sets,target_reps, target_body_part)
+                VALUES ('#{opts["exercise_name"]}',
                         #{opts["target_weight"]},
                         #{opts["target_sets"]},
                         #{opts["target_reps"]},
@@ -70,7 +71,7 @@ class Gainz
 
                 "target_reps" => results.first["target_reps"].to_i,
 
-                "taget_body_part" => results.first["target_body_part"]
+                "target_body_part" => results.first["target_body_part"]
             }
         end
 
@@ -83,9 +84,9 @@ class Gainz
                 target_weight= #{opts["target_weight"]},
                 target_sets= #{opts["target_sets"]},
                 target_reps= #{opts["target_reps"]},
-                target_body_part= #{opts["target_body_part"]}
+                target_body_part= '#{opts["target_body_part"]}'
                 WHERE exercise_id= #{id}
-                RETURNING exercise_id, target_weight exercise_name;
+                RETURNING exercise_id, target_weight, exercise_name, target_sets, target_reps, target_body_part;
             SQL
         )
         return{

@@ -16,6 +16,7 @@ class ViewWorkouts extends React.Component{
                             <li className="info">Sets: {this.props.postData.target_sets}</li>
                             <li className="info">Reps: {this.props.postData.target_reps}</li>
                             <li className="info">Weight: {this.props.postData.target_weight} lbs </li>
+                            <li className="info">Target Body Part: {this.props.postData.target_body_part} </li>
                         </ul>
 
                         <ul>
@@ -25,7 +26,7 @@ class ViewWorkouts extends React.Component{
                     </div>
 
                     {this.props.view.pageTitle === 'updateWorkout'
-                ? <UpdateWorkout 
+                ? <UpdateWorkout
                 /> : ''}
             </div>
 
