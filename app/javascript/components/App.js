@@ -47,12 +47,12 @@ class App extends React.Component{
             case 'updateWorkout':
                 pageTitle = 'update'
                 formInputs = {
-                  exerciseName: postData.exercise_name,
-                  targetWeight: postData.target_weight,
-                  targetSets: postData.target_sets,
-                  targetReps: postData.target_Reps,
-                  targetBodyPart: postData.target_body_part,
-                  exerciseId: postData.exercise_id
+                  exercise_name: postData.exercise_name,
+                  target_weight: postData.target_weight,
+                  target_sets: postData.target_sets,
+                  target_reps: postData.target_Reps,
+                  target_body_part: postData.target_body_part,
+                  exercise_id: postData.exercise_id
                 }
                 break
 

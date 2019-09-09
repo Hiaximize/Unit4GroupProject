@@ -41,7 +41,7 @@ class CreateWorkout extends React.Component{
                                 <img id="addWorkoutImage" src={Picture}></img>
                             </div>
 
-                            <legend>Add WorkOut</legend>
+                            <legend>Add Exercise</legend>
 
                                 <label htmlFor="exercise_name"></label>
                                 <input className="addworkout" placeholder="Name of Exercise" value={this.state.exercise_name}

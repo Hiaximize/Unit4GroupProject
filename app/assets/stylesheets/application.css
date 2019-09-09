@@ -88,7 +88,7 @@ fieldset{
 
 #splashButtonsContainer {
   text-align: center;
-  margin-top: 35px;
+  margin-top: 35px auto;
 }
 
 .splashButtons {
@@ -97,7 +97,7 @@ fieldset{
   font-size: 80px;
   width: 90%;
   text-align: center;
-  margin-bottom: 45px;
+  margin: 45px auto;
   border-radius: 4px;
   padding: 6px;
 }
@@ -116,7 +116,6 @@ fieldset{
   left: 0;
   width: 100%;
   margin-top: 50px;
-
 }
 
 #footerTitle {
@@ -151,6 +150,7 @@ li {
   margin: 25px auto;
 }
 
+
 .tile {
   width: 40vw;
   height: 90%;
@@ -158,4 +158,28 @@ li {
   margin: 15px;
   border-radius: 8px;
   margin-bottom: 25px;
+  background-color: rgb(173, 203, 227);
+}
+
+.editDelete{
+  background-color: rgb(99, 172, 229);
+  width: 40%;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 12px;
+  font-size: 24px;
+}
+
+#delete:hover{
+  background-color: red;
+}
+
+.info{
+  font-size: 30px;
+}
+
+.options{
+  display: inline-block;
+  margin-right: 15px;
 }

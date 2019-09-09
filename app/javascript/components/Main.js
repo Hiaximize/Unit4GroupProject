@@ -3,6 +3,7 @@ import React from 'react'
 import CreateWorkout from './CreateWorkout'
 import Picture from '../../assets/images/workoutPlaceholder.png'
 import ViewWorkouts from './ViewWorkouts'
+import UpdateWorkout from './UpdateWorkout'
 
 class Main extends React.Component{
     constructor(props){
@@ -33,7 +34,7 @@ class Main extends React.Component{
           }
         })
           .then(createdExercise => {
-            
+
             return createdExercise.json()
           })
           .then(jsonedExercise => {
@@ -66,11 +67,7 @@ class Main extends React.Component{
 ///Delete
 
     handleDelete = (exercise_id) => {
-     
-      
-      // console.log(this.state)
-      // console.log(this.props)
-      // console.log(this.props.postData)
+
       fetch(`/exercise/${exercise_id}`, {
         method: 'DELETE',
         headers: {
@@ -79,18 +76,14 @@ class Main extends React.Component{
         }
       })
       .then(data => {
-        
+
         this.setState(prevState => {
           const exercises = prevState.exercises.filter( exercise => exercise.exercise_id !== exercise_id)
           return { exercises }
         })
-        
+
       })
       .catch(err => console.log(err))
-
-      //  setTimeout(() => {
-      //    location.reload()
-      //  }, 3000);
     }
 
      handleSubmit(event) {
@@ -114,7 +107,7 @@ class Main extends React.Component{
                     <img id="memeImage" src={Picture} />
                 </div>
                 <div id="splashButtonsContainer">
-                  <li onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton"> Create Workout </li>
+                  <li onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton">Create Exercise</li>
                   <li onClick={()=>{this.props.handleView('home')}} className="splashButtons" id="goToWorkoutButton">View Exercises</li>
                 </div>
               </div>
@@ -142,6 +135,14 @@ class Main extends React.Component{
                   view={this.props.view}
                   />
                 : ''}
+
+                {this.props.view.pageTitle === 'update'
+                ? <UpdateWorkout
+                handleCreate={this.handleCreate}
+                formInputs={this.props.formInputs}
+                handleUpdate={this.handleUpdate}
+                /> : ''}
+
             </div>
 
 
