@@ -5,6 +5,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap');
+
 html{
     margin: 0;
 }
@@ -96,6 +98,7 @@ fieldset{
 }
 
 .splashButtons {
+  font-family: "Amaranth", sans-serif;
   background-color: #4b86b4;
   color: #e7eff6;
   font-size: 80px;
@@ -156,8 +159,9 @@ li {
 
 
 .tile {
-  width: 40vw;
-  height: 90%;
+  width: 85vw;
+  height: 60vh;
+  /* height: 90%; */
   border: 1px solid #e7eff6;
   margin: 15px;
   border-radius: 8px;
@@ -237,7 +241,7 @@ li {
 
 
   .tile {
-    width: 20vw;
+    width: 25.50vw;
     height: 90%;
     border: 1px solid #e7eff6;
     margin: 15px;
