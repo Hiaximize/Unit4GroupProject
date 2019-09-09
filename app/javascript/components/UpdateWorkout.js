@@ -39,18 +39,18 @@ class UpdateWorkout extends React.Component{
     }
         render(){
             return(
-                <div>
+                <div id="updateExerciseFormContainer">
                 <form onSubmit={this.handleSubmit}>
 
                                   <fieldset>
 
                                       <div id="imageContainer">
-                                          <img id="addWorkoutImage" src={Picture}></img>
+                                          {/* <img id="addWorkoutImage" src={Picture}></img> */}
                                       </div>
 
                                       <legend>Update Exercise</legend>
 
-                                          <label className="updateLabel" htmlFor="exercise_name"></label>
+                                          <label id="exercise_name" className="updateLabel" htmlFor="exercise_name">Exercise Name</label>
                                           <input className="addworkout"
                                          type="text" id="exercise_name" onChange={this.handleChange} 
                                         //  making change here from props to state

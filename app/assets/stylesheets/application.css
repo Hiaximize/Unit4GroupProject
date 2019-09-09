@@ -7,6 +7,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
 html{
     margin: 0;
 }
@@ -14,6 +18,7 @@ html{
 body{
     background-color: rgb(42, 77, 105);
     color: rgb(231, 239, 246);
+    font-family: "Barlow Condensed", sans-serif;
 }
 
 h1{
@@ -25,11 +30,18 @@ h1{
     text-align: center;
 }
 
-
+#updateSubmit{
+  margin-top: 25px;
+}
 #exercise_name_info{
   font-size: 35px;
   font-weight: 600;
   letter-spacing: 2px;
+  color: #4b86b4;
+}
+
+.updateLabel{
+  font-size: 24px;
 }
 
 #header h1 {
@@ -81,6 +93,7 @@ fieldset{
 }
 
 #submit{
+    margin-top: 15px;
     text-align: center;
     border-radius: 8px;
     background-color: rgb(75, 134, 180);
@@ -155,6 +168,7 @@ li {
 
 
 .tile {
+  font-family: "Barlow", sans-serif;
   width: 85vw;
   height: 60vh;
   /* height: 90%; */
@@ -189,6 +203,10 @@ li {
 
 /* DESKTOP VIEW / ANYTHING BIGGER THAN A MOBILE DEVICE */
 @media(min-width: 1200px){
+
+  #updateExerciseFormContainer{
+    width: 100%;
+  }
   
   #header {
     display: flex;
@@ -289,6 +307,7 @@ li {
   }
   #target_body_part{
     text-align: center;
+    margin-bottom: 40px;
     width: 80%;
   }
 
