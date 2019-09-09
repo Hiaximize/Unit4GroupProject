@@ -1,9 +1,9 @@
 import React from 'react'
 // import Splash from './Splash.js'
 import CreateWorkout from './CreateWorkout'
-import Picture from '../../assets/images/workoutPlaceholder.png'
 import ViewWorkouts from './ViewWorkouts'
 import UpdateWorkout from './UpdateWorkout'
+
 
 class Main extends React.Component{
     constructor(props){
@@ -102,11 +102,8 @@ class Main extends React.Component{
         return(
             <main>
 
-
               <div id="splashContainer">
-                <div id="mainImage">
-                    <img id="memeImage" src={Picture} />
-                </div>
+              
                 <div id="splashButtonsContainer">
                   <li onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton">Create Exercise</li>
                   <li onClick={()=>{this.props.handleView('home')}} className="splashButtons" id="goToWorkoutButton">View Exercises</li>

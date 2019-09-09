@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header.js'
 import CreateExercise from './CreateExercise.js'
 import Picture from '../../assets/images/workoutPlaceholder.png'
+import Weight from '../../assets/images/dumbbell.png'
 
 class ViewExercise extends React.Component{
     constructor(props){
@@ -11,9 +12,9 @@ class ViewExercise extends React.Component{
         return(
             <div>
                     <img src={Picture}></img>
-                    <div className="tile">
+                    <div className = "tile">
                         <ul>
-                            <li className="info">{this.props.postData.exercise_name}</li>
+                            <li>{this.props.postData.exercise_name}</li>
                             <li className="info">Sets: {this.props.postData.target_sets}</li>
                             <li className="info">Reps: {this.props.postData.target_reps}</li>
                             <li className="info">Weight: {this.props.postData.target_weight} lbs </li>
