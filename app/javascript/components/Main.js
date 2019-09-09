@@ -141,7 +141,7 @@ class Main extends React.Component{
                 handleCreate={this.handleCreate}
                 formInputs={this.props.formInputs}
                 handleUpdate={this.handleUpdate}
-                /> : ''}
+                /> :  ''}
 
             </div>
 
