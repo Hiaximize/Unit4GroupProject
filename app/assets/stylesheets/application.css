@@ -34,10 +34,26 @@ h1{
   margin-top: 25px;
 }
 #exercise_name_info{
-  font-size: 35px;
+  font-size: 80px;
   font-weight: 600;
   letter-spacing: 2px;
   color: #4b86b4;
+}
+
+#target_sets_info{
+  font-size: 70px;
+}
+
+#target_reps_info{
+  font-size: 70px;
+}
+
+#target_weight_info{
+  font-size: 70px;
+}
+
+#target_body_part_info{
+  font-size: 70px;
 }
 
 .updateLabel{
@@ -170,13 +186,14 @@ li {
 .tile {
   font-family: "Barlow", sans-serif;
   width: 85vw;
-  height: 60vh;
+  height: 95%;
   /* height: 90%; */
   border: 1px solid #e7eff6;
   margin: 15px;
   border-radius: 8px;
   margin-bottom: 25px;
   background-color: rgb(173, 203, 227);
+  margin-bottom: 20px;
 }
 
 .editDelete{
@@ -203,6 +220,13 @@ li {
 
 /* DESKTOP VIEW / ANYTHING BIGGER THAN A MOBILE DEVICE */
 @media(min-width: 1200px){
+
+  #exercise_name_info {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #4b86b4;
+  }
 
   #updateExerciseFormContainer{
     width: 100%;
