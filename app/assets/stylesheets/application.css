@@ -20,21 +20,17 @@ h1{
     font-family: "Viga", sans-serif;
     /* font-weight: 600; */
     letter-spacing: 14px;
-    /* text-shadow: 4px 4px 6px #e7eff6, */
-    /* 0 0 5px #2a4d69; */
+    text-shadow: 4px 4px 6px #e7eff6,
+    0 0 5px #2a4d69;
     text-align: center;
 }
-/* 
-#header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 200px;
-    width: 100vw;
-    color: #adcbe3;
-    text-align: center;
-    margin: 100px auto;
-} */
+
+
+#exercise_name_info{
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 
 #header h1 {
   padding-left: 15px;
@@ -274,15 +270,18 @@ li {
   }
 
   #target_reps{
-    width: 30.25%;
+    width: 20%;
     text-align: center;
   }
+  .updateLabel{
+    font-size: 24px;
+  }
   #target_sets{
-    width: 30.25%;
+    width: 20%;
     text-align: center;
   }
   #target_weight{
-    width: 30.25%;
+    width: 20%;
     text-align: center;
   }
   #exercise_name{
@@ -290,7 +289,10 @@ li {
   }
   #target_body_part{
     text-align: center;
+    width: 80%;
   }
+
+  
 
 }
 
