@@ -222,10 +222,29 @@ li {
 @media(min-width: 1200px){
 
   #exercise_name_info {
-    font-size: 35px;
+    font-size: 42px;
     font-weight: 600;
     letter-spacing: 2px;
     color: #4b86b4;
+  }
+
+  #target_reps_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #target_sets_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #target_weight_info{
+    font-size: 35px;
+  }
+
+  #target_body_part_info {
+    font-size: 35px;
+    letter-spacing: 2px;
   }
 
   #updateExerciseFormContainer{
