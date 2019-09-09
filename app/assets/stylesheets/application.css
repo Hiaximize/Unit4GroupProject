@@ -292,10 +292,43 @@ li {
     width: 80%;
   }
 
-  
+  #editDeleteButtonContainer{
+    margin: 0 auto;    
+  }
 
 }
 
+@media(max-width: 1320px){
+   #target_reps {
+     width: 95%;
+     text-align: center;
+   }
+
+   .updateLabel {
+     font-size: 30px;
+     letter-spacing: 4px;
+     margin-left: 15px;
+   }
+
+   #target_sets {
+     width: 95%;
+     text-align: center;
+   }
+
+   #target_weight {
+     width: 95%;
+     text-align: center;
+   }
+
+   #exercise_name {
+     text-align: center;
+   }
+
+   #target_body_part {
+     text-align: center;
+     width: 95%;
+   }
+}
 
 /* ANIMATIONS */
 

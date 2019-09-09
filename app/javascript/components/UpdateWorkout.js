@@ -57,10 +57,10 @@ class UpdateWorkout extends React.Component{
                                          value={this.state.exercise_name}></input><br/>
 
                                           <label className="updateLabel" htmlFor="target_sets">Target Sets</label>
-                                          <input className="addworkout" placeholder="Target Sets" onChange={this.handleChange} value={this.state.target_sets} type="number" id="target_sets"></input>
+                                          <input className="addworkout" placeholder="Target Sets" onChange={this.handleChange} value={this.state.target_sets} type="number" id="target_sets"></input><br />
 
                                           <label className="updateLabel" htmlFor="target_reps">Target Reps</label>
-                                          <input className="addworkout" placeholder="Target Reps" onChange={this.handleChange} value={this.state.target_reps} type="number" id="target_reps"></input>
+                                          <input className="addworkout" placeholder="Target Reps" onChange={this.handleChange} value={this.state.target_reps} type="number" id="target_reps"></input><br />
 
                                           <label className="updateLabel" htmlFor="target_weight">Target Weight</label>
                                           <input className="addworkout" placeholder="Target Weight" type="number" id="target_weight" onChange={this.handleChange} value={this.state.target_weight}></input><br />
