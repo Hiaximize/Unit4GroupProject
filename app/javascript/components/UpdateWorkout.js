@@ -39,33 +39,29 @@ class UpdateWorkout extends React.Component{
     }
         render(){
             return(
-                <div>
+                <div id="updateExerciseFormContainer">
                 <form onSubmit={this.handleSubmit}>
 
                                   <fieldset>
 
-                                      <div id="imageContainer">
-                                          <img id="addWorkoutImage" src={Picture}></img>
-                                      </div>
-
                                       <legend>Update Exercise</legend>
 
-                                          <label htmlFor="exercise_name"></label>
+                                          <label id="exercise_name" className="updateLabel" htmlFor="exercise_name">Exercise Name</label>
                                           <input className="addworkout"
                                          type="text" id="exercise_name" onChange={this.handleChange} 
                                         //  making change here from props to state
                                          value={this.state.exercise_name}></input><br/>
 
-                                          <label htmlFor="target_sets"></label>
-                                          <input className="addworkout" placeholder="Target Sets" onChange={this.handleChange} value={this.state.target_sets} type="number" id="target_sets"></input><br/>
+                                          <label className="updateLabel" htmlFor="target_sets">Target Sets</label>
+                                          <input className="addworkout" placeholder="Target Sets" onChange={this.handleChange} value={this.state.target_sets} type="number" id="target_sets"></input><br />
 
-                                          <label htmlFor="target_reps"></label>
-                                          <input className="addworkout" placeholder="Target Reps" onChange={this.handleChange} value={this.state.target_reps} type="number" id="target_reps"></input><br/>
+                                          <label className="updateLabel" htmlFor="target_reps">Target Reps</label>
+                                          <input className="addworkout" placeholder="Target Reps" onChange={this.handleChange} value={this.state.target_reps} type="number" id="target_reps"></input><br />
 
-                                          <label htmlFor="target_weight"></label>
-                                          <input className="addworkout" placeholder="Target Weight" type="number" id="target_weight" onChange={this.handleChange} value={this.state.target_weight}></input><br/>
+                                          <label className="updateLabel" htmlFor="target_weight">Target Weight</label>
+                                          <input className="addworkout" placeholder="Target Weight" type="number" id="target_weight" onChange={this.handleChange} value={this.state.target_weight}></input><br />
 
-                                          <label htmlFor="target_body_part"></label>
+                                          <label className="updateLabel" htmlFor="target_body_part">Target Body Part</label>
                                           <input  className="addworkout" placeholder="Target Body Part" type="text" id="target_body_part" onChange={this.handleChange} value={this.state.target_body_part} ></input><br/>
 
                                           <input className="addworkout" type="submit" id="submit" value="Update Exercise" />

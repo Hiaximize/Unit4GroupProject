@@ -5,6 +5,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
 html{
     margin: 0;
 }
@@ -12,27 +18,47 @@ html{
 body{
     background-color: rgb(42, 77, 105);
     color: rgb(231, 239, 246);
+    font-family: "Barlow Condensed", sans-serif;
 }
 
 h1{
     font-family: "Viga", sans-serif;
     /* font-weight: 600; */
     letter-spacing: 14px;
-    /* text-shadow: 4px 4px 6px #e7eff6, */
-    /* 0 0 5px #2a4d69; */
+    text-shadow: 4px 4px 6px #e7eff6,
+    0 0 5px #2a4d69;
     text-align: center;
 }
-/* 
-#header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 200px;
-    width: 100vw;
-    color: #adcbe3;
-    text-align: center;
-    margin: 100px auto;
-} */
+
+#updateSubmit{
+  margin-top: 25px;
+}
+#exercise_name_info{
+  font-size: 80px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #4b86b4;
+}
+
+#target_sets_info{
+  font-size: 70px;
+}
+
+#target_reps_info{
+  font-size: 70px;
+}
+
+#target_weight_info{
+  font-size: 70px;
+}
+
+#target_body_part_info{
+  font-size: 70px;
+}
+
+.updateLabel{
+  font-size: 24px;
+}
 
 #header h1 {
   padding-left: 15px;
@@ -83,6 +109,7 @@ fieldset{
 }
 
 #submit{
+    margin-top: 15px;
     text-align: center;
     border-radius: 8px;
     background-color: rgb(75, 134, 180);
@@ -96,6 +123,7 @@ fieldset{
 }
 
 .splashButtons {
+  font-family: "Amaranth", sans-serif;
   background-color: #4b86b4;
   color: #e7eff6;
   font-size: 80px;
@@ -154,20 +182,27 @@ li {
   margin: 25px auto;
 }
 
+#buttonContainer{
+  display: flex;
+  justify-content: space-around;
+}
 
 .tile {
-  width: 40vw;
-  height: 90%;
+  font-family: "Barlow", sans-serif;
+  width: 85vw;
+  height: 95%;
+  /* height: 90%; */
   border: 1px solid #e7eff6;
   margin: 15px;
   border-radius: 8px;
   margin-bottom: 25px;
   background-color: rgb(173, 203, 227);
+  margin-bottom: 20px;
 }
 
 .editDelete{
   background-color: rgb(99, 172, 229);
-  width: 40%;
+  width: 250px;;
   height: 40px;
   border-radius: 10px;
   text-align: center;
@@ -189,6 +224,36 @@ li {
 
 /* DESKTOP VIEW / ANYTHING BIGGER THAN A MOBILE DEVICE */
 @media(min-width: 1200px){
+
+  #exercise_name_info {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #4b86b4;
+  }
+
+  #target_reps_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #target_sets_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #target_weight_info{
+    font-size: 35px;
+  }
+
+  #target_body_part_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #updateExerciseFormContainer{
+    width: 100%;
+  }
   
   #header {
     display: flex;
@@ -237,7 +302,7 @@ li {
 
 
   .tile {
-    width: 20vw;
+    width: 25.50vw;
     height: 90%;
     border: 1px solid #e7eff6;
     margin: 15px;
@@ -248,7 +313,7 @@ li {
 
   .editDelete {
     background-color: rgb(99, 172, 229);
-    width: 40%;
+    width: 150px;
     height: 40px;
     border-radius: 10px;
     text-align: center;
@@ -270,15 +335,18 @@ li {
   }
 
   #target_reps{
-    width: 30.25%;
+    width: 20%;
     text-align: center;
   }
+  .updateLabel{
+    font-size: 24px;
+  }
   #target_sets{
-    width: 30.25%;
+    width: 20%;
     text-align: center;
   }
   #target_weight{
-    width: 30.25%;
+    width: 20%;
     text-align: center;
   }
   #exercise_name{
@@ -286,10 +354,48 @@ li {
   }
   #target_body_part{
     text-align: center;
+    margin-bottom: 40px;
+    width: 80%;
   }
+
+  #editDeleteButtonContainer{
+    margin: 0 auto;    
+  }
+
 
 }
 
+@media(max-width: 1320px){
+   #target_reps {
+     width: 95%;
+     text-align: center;
+   }
+
+   .updateLabel {
+     font-size: 30px;
+     letter-spacing: 4px;
+     margin-left: 15px;
+   }
+
+   #target_sets {
+     width: 95%;
+     text-align: center;
+   }
+
+   #target_weight {
+     width: 95%;
+     text-align: center;
+   }
+
+   #exercise_name {
+     text-align: center;
+   }
+
+   #target_body_part {
+     text-align: center;
+     width: 95%;
+   }
+}
 
 /* ANIMATIONS */
 

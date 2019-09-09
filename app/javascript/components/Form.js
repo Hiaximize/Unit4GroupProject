@@ -36,7 +36,7 @@
                                 <label htmlFor="targetBodyPart"></label>
                                 <input className="addworkout" value={this.props.target_body_part} placeholder="Target Body Part" type="text" id="targetBodyPart"></input><br/>
 
-                                <input className="addworkout" type="submit" id="submit" value="SUBMIT WORKOUT" />
+                                <input className="addworkout" type="submit" id="updateSubmit" value="SUBMIT WORKOUT" />
 
                         </fieldset>
                     </form>

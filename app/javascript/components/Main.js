@@ -41,7 +41,7 @@ class Main extends React.Component{
             this.props.handleView('home')
             this.setState(prevState => {
               // Made change here from push to unshift
-              prevState.exercises.unshift(jsonedExercise)
+              prevState.exercises.push(jsonedExercise)
               return { exercises: prevState.exercises}
               this.fetchExercises()
             })
@@ -105,9 +105,13 @@ class Main extends React.Component{
               <div id="splashContainer">
               
                 <div id="splashButtonsContainer">
+
                   <li onClick={()=>{this.props.handleView('createWorkout')}} className="splashButtons" id="createWorkoutButton">Create Exercise</li>
+
                   <li onClick={()=>{this.props.handleView('home')}} className="splashButtons" id="goToWorkoutButton">View Exercises</li>
+
                 </div>
+
               </div>
 
 
@@ -150,13 +154,7 @@ class Main extends React.Component{
               <br />
               <br />
               <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
+         
 
             </main>
         )

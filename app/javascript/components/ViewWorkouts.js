@@ -3,34 +3,35 @@ import Header from './Header.js'
 import CreateWorkout from './CreateWorkout.js'
 import weight from '../../assets/images/weight.png'
 
-// const weightHeightWidth = {"height": "40px", "width": "40px"}
+const weightHeightWidth = {"height": "40px", "width": "40px"}
 
 class ViewWorkouts extends React.Component{
     constructor(props){
         super(props)
-        this.state ={
-            weightHeightWidth: {
-                "height": "40px",
-                "width": "40px",
-            }
-        }
+        
     }
     render(){
         return(
             <div>
-                    < div className = "swing-in-top-fwd tile" >
+                    <div className = "tile swing-in-top-fwd">
                         <ul>
-                            <li className="info">{this.props.postData.exercise_name}</li>
-                            <li className="info">Sets: {this.props.postData.target_sets}</li>
-                            <li className="info">Reps: {this.props.postData.target_reps}</li>
-                           <img style={this.state.weightHeightWidth} src={weight}></img> <li className="info">Weight: {this.props.postData.target_weight} lbs </li>
-                            <li className="info">Target Body Part: {this.props.postData.target_body_part} </li>
+                            <li id="exercise_name_info" className="info">{this.props.postData.exercise_name}</li>
+                            <li id="target_sets_info" className="info">Sets: {this.props.postData.target_sets}</li>
+                            <li id="target_reps_info" className="info">Reps: {this.props.postData.target_reps}</li>
+                          
+                            <li id="target_weight_info" className="info">Weight: {this.props.postData.target_weight} lbs </li>
+                            <li id="target_body_part_info" className="info">Target Body Part: {this.props.postData.target_body_part} </li>
                         </ul>
 
-                        <ul>
-                          <li className="editDelete options" onClick={() => {this.props.handleView('updateWorkout', this.props.postData)}}>Edit</li>
-                          <li className="editDelete options" id="delete" onClick={()=> {this.props.handleDelete(this.props.postData.exercise_id)}}>Delete</li>
-                        </ul>
+                    <div id="buttonContainer">
+                        <div id="editButtonContainer">
+                          <li id="editButton" className="editDelete options" onClick={() => {this.props.handleView('updateWorkout', this.props.postData)}}>Edit</li>
+                        </div>
+
+                        <div id="deleteButtonContainer">
+                          <li id="deleteButton" className="editDelete options" onClick={()=> {this.props.handleDelete(this.props.postData.exercise_id)}}>Delete</li>
+                        </div>
+                        </div>
                     </div>
 
                     {this.props.view.pageTitle === 'updateWorkout'
@@ -44,7 +45,3 @@ class ViewWorkouts extends React.Component{
 
 
 export default ViewWorkouts
-// <div id="viewWorkoutContainer">
-// <div id="tileContainer">
-// </div>
-// </div>
