@@ -44,10 +44,6 @@ class UpdateWorkout extends React.Component{
 
                                   <fieldset>
 
-                                      <div id="imageContainer">
-                                          {/* <img id="addWorkoutImage" src={Picture}></img> */}
-                                      </div>
-
                                       <legend>Update Exercise</legend>
 
                                           <label id="exercise_name" className="updateLabel" htmlFor="exercise_name">Exercise Name</label>
