@@ -40,7 +40,8 @@ class Main extends React.Component{
           .then(jsonedExercise => {
             this.props.handleView('home')
             this.setState(prevState => {
-              prevState.exercises.push(jsonedExercise)
+              // Made change here from push to unshift
+              prevState.exercises.unshift(jsonedExercise)
               return { exercises: prevState.exercises}
               this.fetchExercises()
             })
