@@ -1,7 +1,7 @@
 import React from 'react'
 // import Main from './Main'
 import Picture from '../../assets/images/workoutPlaceholder.png'
-
+import Main from './Main'
 
 class CreateWorkout extends React.Component{
     constructor(props){
@@ -10,8 +10,9 @@ class CreateWorkout extends React.Component{
           exercise_name: '',
           target_weight: '',
           target_sets: '',
-          target_reps: ''
-        //   exercise_id: null
+          target_reps: '',
+          target_body_part: '',
+          exercise_id: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -57,7 +58,7 @@ class CreateWorkout extends React.Component{
                                 <input value={this.state.target_weight} onChange={this.handleChange} className="addworkout" placeholder="Target Weight" type="number" id="target_weight"></input><br/>
 
                                 <label htmlFor="target_body_part"></label>
-                                <input value={this.state.target_body_part} className="addworkout" placeholder="Target Body Part" type="text" id="target_body_part"></input><br/>
+                                <input value={this.state.target_body_part} onChange={this.handleChange} className="addworkout" placeholder="Target Body Part" type="text" id="target_body_part"></input><br/>
 
                                 <input className="addworkout" type="submit" id="submit" value="SUBMIT WORKOUT" />
 
