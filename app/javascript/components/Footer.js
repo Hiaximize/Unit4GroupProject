@@ -4,6 +4,7 @@ class Footer extends React.Component{
     render(){
         return(
           <div id="footerContainer">
+            <a href="#" id="top">TOP</a>
           <h3 id="footerTitle">Development Team</h3>
             <div id="footer">
                 <div id="derek">

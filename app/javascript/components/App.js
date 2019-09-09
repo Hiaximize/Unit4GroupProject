@@ -50,7 +50,7 @@ class App extends React.Component{
                   exercise_name: postData.exercise_name,
                   target_weight: postData.target_weight,
                   target_sets: postData.target_sets,
-                  target_reps: postData.target_Reps,
+                  target_reps: postData.target_reps,
                   target_body_part: postData.target_body_part,
                   exercise_id: postData.exercise_id
                 }
