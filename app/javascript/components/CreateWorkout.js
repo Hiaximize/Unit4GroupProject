@@ -32,14 +32,16 @@ class CreateWorkout extends React.Component{
     render(){
         return(
             <div id="addWorkoutContainer">
+                 
 
                 <div id="addWorkout">
+                     
                     <form onSubmit={this.handleSubmit}>
 
                         <fieldset>
-
+                             
                              <div id="imageContainer">
-                                <img id="addWorkoutImage" src={Picture}></img>
+                        
                             </div>
 
                             <legend>Add Exercise</legend>
@@ -49,13 +51,13 @@ class CreateWorkout extends React.Component{
                                 onChange={this.handleChange} type="text" id="exercise_name"></input><br/>
 
                                 <label htmlFor="target_sets"></label>
-                                <input value={this.state.target_sets} onChange={this.handleChange} className="addworkout" placeholder="Target Sets" type="number" id="target_sets"></input><br/>
+                                <input value={this.state.target_sets} onChange={this.handleChange} className="addworkout" placeholder="Target Sets" type="number" id="target_sets"></input>
 
                                 <label htmlFor="target_reps"></label>
-                                <input value={this.state.target_reps} onChange={this.handleChange} className="addworkout" placeholder="Target Reps" type="number" id="target_reps"></input><br/>
+                                <input value={this.state.target_reps} onChange={this.handleChange} className="addworkout" placeholder="Target Reps" type="number" id="target_reps"></input>
 
                                 <label htmlFor="target_weight"></label>
-                                <input value={this.state.target_weight} onChange={this.handleChange} className="addworkout" placeholder="Target Weight" type="number" id="target_weight"></input><br/>
+                                <input value={this.state.target_weight} onChange={this.handleChange} className="addworkout" placeholder="Target Weight" type="number" id="target_weight"></input>
 
                                 <label htmlFor="target_body_part"></label>
                                 <input value={this.state.target_body_part} onChange={this.handleChange} className="addworkout" placeholder="Target Body Part" type="text" id="target_body_part"></input><br/>

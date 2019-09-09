@@ -1,6 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Viga&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Amaranth&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+
 html{
     margin: 0;
 }
@@ -8,44 +18,64 @@ html{
 body{
     background-color: rgb(42, 77, 105);
     color: rgb(231, 239, 246);
+    font-family: "Barlow Condensed", sans-serif;
 }
 
 h1{
-    font-size: 50px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 600;
+    font-family: "Viga", sans-serif;
+    /* font-weight: 600; */
+    letter-spacing: 14px;
+    text-shadow: 4px 4px 6px #e7eff6,
+    0 0 5px #2a4d69;
+    text-align: center;
 }
 
-#header{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    width: 100vw;
-    /* background-color: red; */
-    text-align: center;
+#updateSubmit{
+  margin-top: 25px;
+}
+#exercise_name_info{
+  font-size: 80px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #4b86b4;
+}
+
+#target_sets_info{
+  font-size: 70px;
+}
+
+#target_reps_info{
+  font-size: 70px;
+}
+
+#target_weight_info{
+  font-size: 70px;
+}
+
+#target_body_part_info{
+  font-size: 70px;
+}
+
+.updateLabel{
+  font-size: 24px;
 }
 
 #header h1 {
   padding-left: 15px;
-  font-size: 90px;
+  font-size: 180px;
 }
 
-#mainImage{
-    margin-top: 115px;
+/* #mainImage{
     width: 100%;
+    display: inline-block;
     height: 650px;
-    /* background-color: black; */
-    box-sizing: border-box;
-    text-align: center;
-}
-#profileImage{
-    margin-right: 50px;
-    border-radius: 50%;
-}
+    box-sizing: none;
+} */
+
 #memeImage{
     width: 90%;
     height: 650px;
-    border: 2px solid black;
+    border-radius: 8px;
 }
 #imageContainer{
     text-align: center;
@@ -79,6 +109,7 @@ fieldset{
 }
 
 #submit{
+    margin-top: 15px;
     text-align: center;
     border-radius: 8px;
     background-color: rgb(75, 134, 180);
@@ -92,6 +123,7 @@ fieldset{
 }
 
 .splashButtons {
+  font-family: "Amaranth", sans-serif;
   background-color: #4b86b4;
   color: #e7eff6;
   font-size: 80px;
@@ -150,20 +182,27 @@ li {
   margin: 25px auto;
 }
 
+#buttonContainer{
+  display: flex;
+  justify-content: space-around;
+}
 
 .tile {
-  width: 40vw;
-  height: 90%;
+  font-family: "Barlow", sans-serif;
+  width: 85vw;
+  height: 95%;
+  /* height: 90%; */
   border: 1px solid #e7eff6;
   margin: 15px;
   border-radius: 8px;
   margin-bottom: 25px;
   background-color: rgb(173, 203, 227);
+  margin-bottom: 20px;
 }
 
 .editDelete{
   background-color: rgb(99, 172, 229);
-  width: 40%;
+  width: 250px;;
   height: 40px;
   border-radius: 10px;
   text-align: center;
@@ -179,15 +218,282 @@ li {
   font-size: 30px;
 }
 
-.options{
-  display: inline-block;
-  margin-right: 15px;
-}
-
-updateExerciseFormContainer{
-  display: inline-block;
-}
-
 #top{
   text-align: center;
+}
+
+/* DESKTOP VIEW / ANYTHING BIGGER THAN A MOBILE DEVICE */
+@media(min-width: 1200px){
+
+  #exercise_name_info {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #4b86b4;
+  }
+
+  #target_reps_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #target_sets_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #target_weight_info{
+    font-size: 35px;
+  }
+
+  #target_body_part_info {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  #updateExerciseFormContainer{
+    width: 100%;
+  }
+  
+  #header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100vw;
+    color: #adcbe3;
+    text-align: center;
+    margin: 200px auto;
+  }
+
+  #memeImage {
+    width: 90%;
+    height: 650px;
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+  #splashButtonsContainer {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .splashButtons {
+    background-color: #4b86b4;
+    display: inline-block;
+    color: #e7eff6;
+    font-size: 80px;
+    width: 40%;
+    text-align: center;
+    margin: 35px 30px;
+    border-radius: 4px;
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  #tileContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 25px auto;
+  }
+
+
+  .tile {
+    width: 25.50vw;
+    height: 90%;
+    border: 1px solid #e7eff6;
+    margin: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background-color: rgb(173, 203, 227);
+  }
+
+  .editDelete {
+    background-color: rgb(99, 172, 229);
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 24px;
+  }
+
+  #delete:hover {
+    background-color: red;
+  }
+
+  .info {
+    font-size: 30px;
+  }
+
+  .options {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  #target_reps{
+    width: 20%;
+    text-align: center;
+  }
+  .updateLabel{
+    font-size: 24px;
+  }
+  #target_sets{
+    width: 20%;
+    text-align: center;
+  }
+  #target_weight{
+    width: 20%;
+    text-align: center;
+  }
+  #exercise_name{
+    text-align: center;
+  }
+  #target_body_part{
+    text-align: center;
+    margin-bottom: 40px;
+    width: 80%;
+  }
+
+  #editDeleteButtonContainer{
+    margin: 0 auto;    
+  }
+
+
+}
+
+@media(max-width: 1320px){
+   #target_reps {
+     width: 95%;
+     text-align: center;
+   }
+
+   .updateLabel {
+     font-size: 30px;
+     letter-spacing: 4px;
+     margin-left: 15px;
+   }
+
+   #target_sets {
+     width: 95%;
+     text-align: center;
+   }
+
+   #target_weight {
+     width: 95%;
+     text-align: center;
+   }
+
+   #exercise_name {
+     text-align: center;
+   }
+
+   #target_body_part {
+     text-align: center;
+     width: 95%;
+   }
+}
+
+/* ANIMATIONS */
+
+.rotate-out-center {
+  -webkit-animation: rotate-out-center 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: rotate-out-center 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-9-9 11:27:34
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation rotate-out-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-out-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate-out-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-9-9 11:31:30
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation swing-in-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
 }
