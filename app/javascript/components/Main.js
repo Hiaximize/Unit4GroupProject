@@ -40,7 +40,8 @@ class Main extends React.Component{
           .then(jsonedExercise => {
             this.props.handleView('home')
             this.setState(prevState => {
-              prevState.exercises.push(jsonedExercise)
+              // Made change here from push to unshift
+              prevState.exercises.unshift(jsonedExercise)
               return { exercises: prevState.exercises}
               this.fetchExercises()
             })
@@ -49,7 +50,7 @@ class Main extends React.Component{
 
 ///update
     handleUpdate = (updatedData) => {
-      fetch(`/exercise/${updatedData.id}`, {
+      fetch(`/exercise/${updatedData.exercise_id}`, {
         body: JSON.stringify(updatedData),
         method: 'PUT',
         headers: {
@@ -131,17 +132,18 @@ class Main extends React.Component{
                 ? <CreateWorkout
                   handleCreate={this.handleCreate}
                   formInputs={this.props.formInputs}
-                  handleUpdate={this.handleUpdate}
+                  // handleUpdate={this.handleUpdate}
                   view={this.props.view}
                   />
                 : ''}
 
                 {this.props.view.pageTitle === 'update'
                 ? <UpdateWorkout
-                handleCreate={this.handleCreate}
+                handleView={this.state.view}
                 formInputs={this.props.formInputs}
                 handleUpdate={this.handleUpdate}
-                /> : ''}
+                view={this.props.view}
+                /> :  ''}
 
             </div>
 

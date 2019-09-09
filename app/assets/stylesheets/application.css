@@ -183,3 +183,11 @@ li {
   display: inline-block;
   margin-right: 15px;
 }
+
+updateExerciseFormContainer{
+  display: inline-block;
+}
+
+#top{
+  text-align: center;
+}
