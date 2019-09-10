@@ -9,7 +9,7 @@ Inspiration for project
 
 I use to be an avid weight lifter and one thing I could never get into, was bringing a pen and notebook with me to the gym and write the notes inside during my workout. This topped with our love handles growing ever more, we decided we needed a solution to get us when we get back in the gym.
 
-### Userstores
+### Userstories
 1. As a user I want to be able to come to Gainz Tracker and create a workout routine to use while in the gym.
 
 2. As a user I want to be able to save exercises.
