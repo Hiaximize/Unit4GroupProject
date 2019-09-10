@@ -25,7 +25,7 @@ I use to be an avid lifter and one thing I could never get into, was bringing a 
 
 # Wireframes
 
-![index page](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/index.png)
+![index page](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/view_workouts.png)
 
 ![create workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/create_a_workout.png)
 
