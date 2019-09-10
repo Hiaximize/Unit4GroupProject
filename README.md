@@ -25,15 +25,16 @@ I use to be an avid lifter and one thing I could never get into, was bringing a 
 
 # Wireframes
 
-![index page](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/index.png)
+![index page](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/view_workouts.png)
 
-![create workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/create_a_workout.png)
-
-![start working out](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/start_workout.png)
+![create workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/create_a_workout.png)
 
 ![view workouts](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/view_workouts.png)
 
-![edit/delete workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/edit_workout.png)
+![edit/delete workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/edit_workout.png)
+
+If we had some more time
+![start working out](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/start_workout.png)
 
 ## Technologies Used
 Our app is built using Rails, PostgreSQL, React, HTML, JavaScript, CSS, and Ruby. It is deployed on Heroku.
