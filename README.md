@@ -4,20 +4,21 @@
 ### Hosted on Heroku: zen-tor-60140.herokuapp.com
 
 ## Gainz Tracker
-
 Inspiration for project
 
 I use to be an avid weight lifter and one thing I could never get into, was bringing a pen and notebook with me to the gym and write the notes inside during my workout. This topped with our love handles growing ever more, we decided we needed a solution to get us when we get back in the gym.
 
 ### Userstories
-1. As a user I want to be able to come to Gainz Tracker and create a workout routine to use while in the gym.
+    1. As a user I want to be able to come to Gainz Tracker and create a workout routine to use while in the gym.
 
-2. As a user I want to be able to save exercises.
+    2. As a user I want to be able to save exercises.
 
-3. As a user I want to be able to add new exercises to use in workout plan.
+    3. As a user I want to be able to add new exercises to use in workout plan.
 
-4. As a user I want to be able to edit/remove existing exercises.
+    4. As a user I want to be able to edit/remove existing exercises.
 
+### Aproach taken
+    Mobile First
 
 
 # Wireframes
@@ -105,7 +106,6 @@ Here is the ternary operators:
 ```
 
 # Back-end
-
 Ruby on Rails handles our controllers and routes, and our api is being implemented using PostegreSQL. We thought about using multiple models, but since we had only four days to make this build, we decided to simplify our approach and use only one.
 
 Here is an example of a JSON object that is stored in our api.
@@ -124,11 +124,9 @@ Here is an example of a JSON object that is stored in our api.
 We used postman to test the backend routes
 
 ## challenges
-
 We had some trouble with naming conventions in the beginning which led to some front end issues
 
 # Thoughts on building
-
 Once we were able to get a fresh set of eyes to help us get past a typo, the process went much more smoothly. We were taught how to repurpose the same form for both editing and creating workouts, but we decided to make individual forms for each since our ternary operators where still being funky at the time.
 
 Overall a great learning experience and a confidence builder to approach another React build.
