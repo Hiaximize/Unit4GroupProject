@@ -29,7 +29,6 @@ I use to be an avid lifter and one thing I could never get into, was bringing a 
 
 ![create workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/create_a_workout.png)
 
-![view workouts](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/images/view_workouts.png)
 
 ![edit/delete workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/edit_workout.png)
 
