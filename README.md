@@ -123,14 +123,29 @@ Here is an example of a JSON object that is stored in our api.
 
 We used postman to test the backend routes
 
-## challenge
+## challenges
 
-We had some troubles getting the front end to work properly with the backend in the beginning. 
+We had some trouble with naming conventions in the beginning which led to some front end issues
 
 # Thoughts on building
 
 Once we were able to get a fresh set of eyes to help us get past a typo, the process went much more smoothly. We were taught how to repurpose the same form for both editing and creating workouts, but we decided to make individual forms for each since our ternary operators where still being funky at the time.
 
 Overall a great learning experience and a confidence builder to approach another React build.
+
+## Group Questions
+
+### 1. What went well for your group? 
+        Heroku
+        
+### 2. What was your groups biggest struggle?
+        Naming Conventions
+        
+### 3. What was the most useful tool that your group relied on the most
+        Postman
+        
+### 4. What was the most surprising aspect of working in a group/a thing (or things) you didn’t anticipate
+        Can't think of any, pretty good operation aside from a typo and the naming convention issue
+
 
 
