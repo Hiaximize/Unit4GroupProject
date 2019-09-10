@@ -18,10 +18,6 @@ I use to be an avid lifter and one thing I could never get into, was bringing a 
 4. As a user I want to be able to edit/remove existing exercises.
 
 
-## ERD Table
-
-![ERD Tables](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/Relational%20Tables.png)
-
 
 # Wireframes
 
