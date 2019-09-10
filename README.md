@@ -33,7 +33,9 @@ I use to be an avid lifter and one thing I could never get into, was bringing a 
 
 ![edit/delete workout](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/edit_workout.png)
 
-If we had some more time
+## If we had some more time we would add a start workout feature
+
+
 ![start working out](https://raw.githubusercontent.com/Hiaximize/Unit4GroupProject/master/app/assets/images/start_workout.png)
 
 ## Technologies Used
